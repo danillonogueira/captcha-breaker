@@ -7,7 +7,9 @@ const options = {
   slowMo: 50
 };
 
-(async () => {require('dotenv').config();
+require('dotenv').config();
+
+(async () => {
   const browser = await puppeteer.launch(options);
   const page = await browser.newPage();
 
