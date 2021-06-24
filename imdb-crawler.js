@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 
 const options = { 
-  headless: false,
+  headless: true,
 };
 
 const writeTxt = (movies) => {
@@ -15,7 +15,7 @@ const writeTxt = (movies) => {
   const browser = await puppeteer.launch(options);
   const page = await browser.newPage();
 
-  console.log('Browsing...')
+  console.log('Navigating to IMDB...')
   await page.goto('https://www.imdb.com/chart/top/');
 
   console.log('Getting movies...')

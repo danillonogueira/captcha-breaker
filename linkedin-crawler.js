@@ -13,7 +13,7 @@ require('dotenv').config();
   const browser = await puppeteer.launch(options);
   const page = await browser.newPage();
 
-  console.log('Navigating to LinkedIn');
+  console.log('Navigating to LinkedIn...');
   await Promise.all([
     page.waitForNavigation(),
     page.goto('https://www.linkedin.com/home')
