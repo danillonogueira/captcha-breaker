@@ -25,13 +25,13 @@ require('dotenv').config();
     page.click('.nav__button-secondary')
   ]);
 
-  console.log('Typing email...')
+  console.log('Typing email...');
   await page.type('#username', process.env.EMAIL);
 
-  console.log('Typing password...')
+  console.log('Typing password...');
   await page.type('#password', process.env.PASSWORD);
 
-  console.log('Logging in...')
+  console.log('Logging in...');
   await page.click('.btn__primary--large');
 
   await Promise.all([

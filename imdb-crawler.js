@@ -15,10 +15,10 @@ const writeTxt = (movies) => {
   const browser = await puppeteer.launch(options);
   const page = await browser.newPage();
 
-  console.log('Navigating to IMDB...')
+  console.log('Navigating to IMDB...');
   await page.goto('https://www.imdb.com/chart/top/');
 
-  console.log('Getting movies...')
+  console.log('Getting movies...');
   await page.$$eval('.lister-list tr .titleColumn a', (movies) => {
     const _movies = (movies.map(movieEl => movieEl.textContent));
 
