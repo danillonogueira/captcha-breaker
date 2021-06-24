@@ -19,7 +19,7 @@ require('dotenv').config();
     page.goto('https://www.linkedin.com/home')
   ]);
 
-  console.log('Clicking sign in button');
+  console.log('Clicking sign in button...');
   await Promise.all([
     page.waitForNavigation(),
     page.click('.nav__button-secondary')
