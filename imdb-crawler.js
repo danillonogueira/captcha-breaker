@@ -8,7 +8,7 @@ const options = {
 };
 
 const writeTxt = (movies) => {
-  movies.forEach((movie) => fs.appendFileSync('movies.txt', `${movie}\n`))
+  movies.forEach((movie) => fs.appendFileSync('movies.txt', `${movie}\n`));
 };
 
 (async () => {
@@ -20,7 +20,7 @@ const writeTxt = (movies) => {
 
   console.log('Getting movies...');
   await page.$$eval('.lister-list tr .titleColumn a', (movies) => {
-    const _movies = (movies.map(movieEl => movieEl.textContent));
+    const _movies = movies.map(movieEl => movieEl.textContent);
 
     return new Promise((resolve, reject) => {
       if (_movies.length) {
